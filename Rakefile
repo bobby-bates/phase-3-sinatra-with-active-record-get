@@ -11,7 +11,7 @@ task :console do
 end
 
 desc "Start the server"
-task :server do  
+task :server do
   if ActiveRecord::Base.connection.migration_context.needs_migration?
     puts "Migrations are pending. Make sure to run `rake db:migrate` first."
     return
